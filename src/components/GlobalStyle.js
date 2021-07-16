@@ -11,6 +11,8 @@ const GlobalStyle = createGlobalStyle`
 
 body{
     background: #121212;
+    font-family: 'Inter', sans-serif;
+    // font-family: 'Lobster', cursive;
 }
 
   
@@ -23,6 +25,8 @@ button{
     background: transparent;
     color: white;
     transition: all 0.5s ease;
+    font-family: 'Inter', sans-serif;
+
     &:hover {
         background-color: #23d997;
     }
@@ -31,6 +35,7 @@ button{
 h2 {
     font-weight: lighter;
     font-size: 4rem;
+
   }
   h3 {
     color: white;

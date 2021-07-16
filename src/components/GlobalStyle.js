@@ -12,7 +12,6 @@ const GlobalStyle = createGlobalStyle`
 body{
     background: #121212;
     font-family: 'Inter', sans-serif;
-    // font-family: 'Lobster', cursive;
 }
 
   

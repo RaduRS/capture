@@ -7,17 +7,16 @@ import { motion } from "framer-motion";
 
 const AboutSection = () => {
   const titleAnimation = {
-    hidden: { opacity: 0, x: -500 },
-    show: { opacity: 1, transition: { duration: 1, ease: "easeOut" }, x: 0 },
+    hidden: { opacity: 0, y: 500 },
+    show: { opacity: 1, transition: { duration: 1, ease: "easeOut" }, y: 0 },
   };
   const container = {
-    hidden: { x: 100, opacity: 1 },
+    hidden: { y: -100, opacity: 1 },
     show: {
-      x: 0,
+      y: 0,
       transition: {
-        duration: 1,
-        ease: "easeOut",
-        staggerChildren: 0.5,
+        duration: 0.5,
+        staggerChildren: 0.25,
         when: "afterChildren",
       },
       opacity: 1,

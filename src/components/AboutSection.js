@@ -4,33 +4,13 @@ import home1 from "../img/home1.png";
 import { StyleAbout, StyleDescription, StyleImage, StyleHide } from "../styles";
 //Framer Motion
 import { motion } from "framer-motion";
+import { titleAnimation, photoAnim, containerAnim, fade } from "../animation";
 
 const AboutSection = () => {
-  const titleAnimation = {
-    hidden: { opacity: 0, y: 500 },
-    show: { opacity: 1, transition: { duration: 1, ease: "easeOut" }, y: 0 },
-  };
-  const container = {
-    hidden: { y: -100, opacity: 1 },
-    show: {
-      y: 0,
-      transition: {
-        duration: 0.5,
-        staggerChildren: 0.25,
-        when: "afterChildren",
-      },
-      opacity: 1,
-    },
-  };
   return (
     <StyleAbout>
       <StyleDescription>
-        <motion.div
-          className="title"
-          variants={container}
-          initial="hidden"
-          animate="show"
-        >
+        <motion.div variants={containerAnim}>
           <StyleHide>
             <motion.h2 variants={titleAnimation}>We work to make</motion.h2>
           </StyleHide>
@@ -43,14 +23,14 @@ const AboutSection = () => {
             <motion.h2 variants={titleAnimation}>come true.</motion.h2>
           </StyleHide>
         </motion.div>
-        <p>
+        <motion.p variants={fade}>
           Contact us for any photography or videography ideas you have. We are
           professionals with amazing skills
-        </p>
-        <button>Contact us</button>
+        </motion.p>
+        <motion.button variants={fade}>Contact us</motion.button>
       </StyleDescription>
       <StyleImage>
-        <img src={home1} alt="guy holding camera" />
+        <motion.img src={home1} alt="guy holding camera" variants={photoAnim} />
       </StyleImage>
     </StyleAbout>
   );

@@ -4,7 +4,12 @@ import home1 from "../img/home1.png";
 import { StyleAbout, StyleDescription, StyleImage, StyleHide } from "../styles";
 //Framer Motion
 import { motion } from "framer-motion";
-import { titleAnimation, photoAnim, containerAnim, fade } from "../animation";
+import {
+  titleAnimation,
+  photoAnim,
+  containerAnim,
+  fadeAbout,
+} from "../animation";
 import Wave from "./Wave";
 
 const AboutSection = () => {
@@ -24,11 +29,11 @@ const AboutSection = () => {
             <motion.h2 variants={titleAnimation}>come true.</motion.h2>
           </StyleHide>
         </motion.div>
-        <motion.p variants={fade}>
+        <motion.p variants={fadeAbout}>
           Contact us for any photography or videography ideas you have. We are
           professionals with amazing skills
         </motion.p>
-        <motion.button variants={fade}>Contact us</motion.button>
+        <motion.button variants={fadeAbout}>Contact us</motion.button>
       </StyleDescription>
       <StyleImage>
         <motion.img src={home1} alt="guy holding camera" variants={photoAnim} />
